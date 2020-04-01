@@ -11,6 +11,14 @@
     "prepush": "npm run test",
     "e2e": "ng e2e"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.js": ["npm run lint", "git add"]
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.7",
@@ -58,8 +66,5 @@
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
-  },
-  "lint-staged": {
-    "*.js": ["npm run lint", "git add"]
   }
 }
