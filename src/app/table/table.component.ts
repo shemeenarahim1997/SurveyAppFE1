@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TableService } from 'primeng/table/table';
+// import { TableService } from 'primeng/table/table';
 import { HttpClient } from '@angular/common/http';
+import {TableService} from '../shared/service/table.service';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -8,13 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TableComponent implements OnInit {
   users:any;
-  private url="http://localhost:8080/surveys";
-constructor(private http: HttpClient) {
+  // private url="http://localhost:8080/surveys";
+constructor(private service: TableService) {
    
     
   }ngOnInit()
   {
-    this.http.get(this.url)
+    this.service.getPosts()
     .subscribe((data)=>this.users=data);
  
   }

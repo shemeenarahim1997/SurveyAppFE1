@@ -15,6 +15,7 @@ import {AdminModule} from '../app/admin/admin.module';
 import {UserModule} from '../app/user/user.module';
 import { TableComponent } from '../app/table/table.component';
 import {TableModule} from 'primeng/table';
+import {TableService} from './shared/service/table.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
@@ -36,7 +37,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 BrowserAnimationsModule
 
   ],
-  providers: [],
+  providers: [TableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

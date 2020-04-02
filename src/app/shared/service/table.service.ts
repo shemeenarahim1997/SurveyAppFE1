@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TableService {
-  private url="http://jsonplaceholder.typicode.com/posts";
+  private url="http://localhost:8080/surveys";
   constructor(private http: HttpClient) { }
   getPosts()
   {

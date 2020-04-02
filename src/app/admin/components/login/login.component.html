@@ -1,9 +1,16 @@
-<div>
-  <div class="cont1"> <h1><i><u>Login</u></i></h1></div> 
-<app-textfield [name]="name1"></app-textfield><br>
-<app-textfield [name]="name2"></app-textfield><br>
+<div >
+  <div class="cont1"> <h1><i>LOGIN</i></h1></div> 
+  <hr>
+<app-textfield [name]="name1"><br></app-textfield><br>
+<app-textfield [name]="name2"><br></app-textfield><br>
 
 <br>
 
 <app-button [value]= "text" (click)="onsub()" ></app-button>
+
+
+<div class="container signin">
+  <p>Already have an account? <a href="#">Sign in</a>.</p>
+</div>
+
 </div>
