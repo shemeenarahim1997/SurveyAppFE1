@@ -1,21 +1,14 @@
-input[type=text]{
-  width: 25%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+mat-label {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(27, 26, 77);
+    text-shadow: 0 .5rem 1rem rgba(50, 0, 100, .1);
 }
-  
-  .container{
-    text-align: center;
-  }
-  .sd{
-    align-content: center;
-  }
-  label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: oblique;
-  
-  }
+
+input{
+    border: none;
+    border-bottom: 1px solid rgba(27, 26, 77, 0.623);
+    font-size: 20px;
+}

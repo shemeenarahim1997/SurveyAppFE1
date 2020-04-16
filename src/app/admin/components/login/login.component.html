@@ -1,16 +1,18 @@
-<div >
-  <div class="cont1"> <h1><i>LOGIN</i></h1></div> 
-  <hr>
-<app-textfield [name]="name1"><br></app-textfield><br>
-<app-textfield [name]="name2"><br></app-textfield><br>
-
-<br>
-
-<app-button [value]= "text" (click)="onsub()" ></app-button>
-
-
-<div class="container signin">
-  <p>Already have an account? <a href="#">Sign in</a>.</p>
-</div>
-
-</div>
+<form class="form-class" [formGroup]="form">
+  <h2>LOGIN</h2>
+  <app-textfield [label]="name1" [formControl]="form.controls['email']"
+    [placeholder]="p_holder1">
+    <mat-icon>{{_icon1}}</mat-icon>
+  </app-textfield>
+  <br>
+  <app-textfield [label]="name2" [formControl]="form.controls['password']"
+    [placeholder]="p_holder2" [type]="_type">
+    <mat-icon>{{_icon2}}</mat-icon>
+  </app-textfield>
+  <br>
+  <br>
+  <app-button [value]="text"></app-button>
+  <br>
+  <br>
+  <a routerLink="/signup">Create a new account</a>
+</form>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextfieldComponent } from './textfield.component';
+import { AddSurveyComponent } from './add-survey.component';
 
-describe('TextfieldComponent', () => {
-  let component: TextfieldComponent;
-  let fixture: ComponentFixture<TextfieldComponent>;
+describe('AddSurveyComponent', () => {
+  let component: AddSurveyComponent;
+  let fixture: ComponentFixture<AddSurveyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TextfieldComponent ]
+      declarations: [ AddSurveyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TextfieldComponent);
+    fixture = TestBed.createComponent(AddSurveyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

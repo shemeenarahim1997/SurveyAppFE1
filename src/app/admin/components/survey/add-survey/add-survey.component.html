@@ -1,0 +1,23 @@
+<form class="form-class" [formGroup]="form"
+    (ngSubmit)="createSurvey(); myNgForm.resetForm()" #myNgForm="ngForm">
+    <h1>Create your own survey</h1>
+    <app-textfield
+        [label]="sur_name"
+        [formControl]="form.controls['survey_name']"
+        [placeholder]="plhr_sur_name">
+        </app-textfield>
+    <br>
+    <mat-form-field class="form-field-class" appearance="none">
+        <mat-label>Description</mat-label>
+        <textarea matInput [formControl]="surveyDescription"
+            placeholder="Write something about your survey..."></textarea>
+    </mat-form-field>
+    <br>
+    <br>
+    <app-button [value]="button_label"></app-button>
+    <div>
+        <mat-error *ngIf="form.hasError('error')">
+            Invalid Survey Details
+          </mat-error>
+    </div>
+</form>

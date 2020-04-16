@@ -1,14 +1,16 @@
+import { RouterModule } from '@angular/router';
+import { MatComponentsModule } from './../shared/components/mat-components/mat-components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
-import { SideBarComponent } from './components/side-bar/side-bar.component';
-
+import { MainNavComponent } from './components/main-nav/main-nav.component';
 
 @NgModule({
-  declarations: [HeaderComponent,SideBarComponent],
+  declarations: [MainNavComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatComponentsModule,
+    RouterModule
   ],
-  exports:[HeaderComponent,SideBarComponent]
+  exports:[MainNavComponent]
 })
 export class LayoutModule { }

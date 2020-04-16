@@ -1,6 +1,6 @@
- @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
-h2{
+h1{
     font-family: 'Varela Round';
     font-weight: 600;
     color: rgb(27, 26, 77);
@@ -13,13 +13,22 @@ h2{
     color: rgb(0, 0, 0);
     background-color: rgba(137, 212, 247, 0.178);
     height: 100%;
-    width: 100%;
     text-align: center;
 }
-
-mat-icon {
-  margin-right: 10px;
+textarea {
+    border: none;
+    border-bottom: 1px solid rgba(27, 26, 77, 0.623);
+    font-size: 20px;
 }
-app-textfield {
-  width: 100%;
+
+textarea {
+    height: 100px;
+}
+
+mat-form-field {
+    width: 327px;
+}
+
+div{
+    margin-top: 20px;
 }
