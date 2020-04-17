@@ -8,21 +8,21 @@ import { throwError } from 'rxjs';
 export class DataService {
   constructor(private url: string, private http: HttpClient) { }
   
-  getAll(api:string){
-    return this.http.get(this.url + api).pipe(
+  getAll(){
+    return this.http.get(this.url).pipe(
       catchError((this.handleError)));
   }
 
-  create(api:string, resource){
-    return this.http.post(this.url + api, resource).pipe(
+  create(resource){
+    return this.http.post(this.url, resource).pipe(
       catchError((this.handleError)));
   }
- update(api:string, resource){
-    return this.http.patch(this.url + api, resource).pipe(
+  update(resource){
+    return this.http.patch(this.url, resource).pipe(
       catchError((this.handleError)));
   }
-  delete(api:string, resource){
-    return this.http.delete(this.url + api, resource).pipe(
+  delete(resource){
+    return this.http.delete(this.url, resource).pipe(
       catchError((this.handleError)));
   }
 

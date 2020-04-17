@@ -1,5 +1,5 @@
 <form class="form-class" [formGroup]="form"
-    (ngSubmit)="createSurvey(); myNgForm.resetForm()" #myNgForm="ngForm">
+    (ngSubmit)="createSurvey()" #myNgForm="ngForm">
     <h1>Create your own survey</h1>
     <app-textfield
         [label]="sur_name"

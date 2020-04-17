@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewResultComponent } from './view-result.component';
+import { AddQuestionOptionsComponent } from './add-question-options.component';
 
-describe('ViewResultComponent', () => {
-  let component: ViewResultComponent;
-  let fixture: ComponentFixture<ViewResultComponent>;
+describe('AddQuestionOptionsComponent', () => {
+  let component: AddQuestionOptionsComponent;
+  let fixture: ComponentFixture<AddQuestionOptionsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewResultComponent ]
+      declarations: [ AddQuestionOptionsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewResultComponent);
+    fixture = TestBed.createComponent(AddQuestionOptionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
