@@ -1,8 +1,10 @@
-input{
+textarea {
     border: none;
-    border-bottom: 1px solid rgba(27, 26, 77, 0.623);
-    font-size: 20px;
+    border-bottom: 0.8px solid rgba(27, 26, 77, 0.623);
+    font-size: 15px;
+    height: 100px;
 }
+
 mat-label {
     font-size: 15px;
     font-weight: 500;

@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './public/login/login.component';
-import { SignUpComponent } from './public/sign-up/sign-up.component';
 import { AddSurveyComponent } from './admin/components/survey-creation/add-survey/add-survey.component';
 import { AddQuestionOptionsComponent } from './admin/components/survey-creation/add-question-options/add-question-options.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+
 
 const routes: Routes = [
   { 
@@ -11,15 +12,15 @@ const routes: Routes = [
     component: LoginComponent 
   },
   { 
-    path: 'signup', 
+    path: 'signUp', 
     component: SignUpComponent 
   },
   { 
-    path: 'new_survey', 
+    path: 'newSurvey', 
     component: AddSurveyComponent 
   },
   { 
-    path: 'new_survey/:survey_id', 
+    path: 'newSurvey/:surveyId', 
     component: AddQuestionOptionsComponent
   }
 ];

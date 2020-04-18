@@ -1,0 +1,18 @@
+<form class="form-class" [formGroup]="form">
+  <h2>LOGIN</h2>
+  <app-textfield [label]="mail" [formControl]="form.controls['email']"
+    [placeholder]="pholderEmail">
+    <mat-icon>{{mailIcon}}</mat-icon>
+  </app-textfield>
+  <br>
+  <app-textfield [label]="pswd" [formControl]="form.controls['password']"
+    [placeholder]="pholderPswd" [type]="_type">
+    <mat-icon>{{pswdIcon}}</mat-icon>
+  </app-textfield>
+  <br>
+  <br>
+  <app-button [btnLabel]="buttonLabel"></app-button>
+  <br>
+  <br>
+  <a routerLink="/signUp">Create a new account</a>
+</form>

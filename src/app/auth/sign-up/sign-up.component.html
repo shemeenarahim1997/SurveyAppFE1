@@ -1,28 +1,28 @@
 <form class="form-class" [formGroup]="form">
     <h2>SIGN UP</h2>
-    <app-textfield [label]="_name"
+    <app-textfield [label]="name"
         [formControl]="form.controls['firstName']">
-        <mat-icon>{{_name_icon}}</mat-icon>
+        <mat-icon>{{nameIcon}}</mat-icon>
     </app-textfield>
     <br>
-    <app-textfield [label]="_email"
+    <app-textfield [label]="mail"
         [formControl]="form.controls['email']"
-        [placeholder]="p_holder_email">
-        <mat-icon>{{_email_icon}}</mat-icon>
+        [placeholder]="pholderEmail">
+        <mat-icon>{{emailIcon}}</mat-icon>
     </app-textfield>
     <br><br>
-    <app-textfield [label]="_password"
+    <app-textfield [label]="pswd"
         [formControl]="form.controls['password']"
         [type]="_type">
-        <mat-icon>{{_password_icon}}</mat-icon>
+        <mat-icon>{{pswdIcon}}</mat-icon>
     </app-textfield>
     <br>
-    <app-textfield appConfirmEqualValidator="password" [label]="_cfpassword"
+    <app-textfield appConfirmEqualValidator="password" [label]="cfPswd"
         [formControl]="form.controls['confirmPassword']"
         [type]="_type">
-        <mat-icon>{{_cfp_icon}}</mat-icon>
+        <mat-icon>{{cfpIcon}}</mat-icon>
     </app-textfield>
     <br>
     <br>
-    <app-button [value]="button_label"></app-button>
+    <app-button [btnLabel]="buttonLabel"></app-button>
 </form>

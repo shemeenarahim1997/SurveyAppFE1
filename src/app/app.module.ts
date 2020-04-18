@@ -1,4 +1,6 @@
-import { SurveyCreateService } from './shared/service/survey-create.service';
+import { ToastrService } from 'ngx-toastr';
+import { AuthModule } from './auth/auth.module';
+import { SurveyCreateService } from './admin/services/survey-create.service';
 import { AppErrorHandler } from './shared/components/http-error-components/app-error-handler';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatComponentsModule } from './shared/components/mat-components/mat-components.module';
@@ -10,24 +12,29 @@ import { AppComponent } from './app.component';
 import { SharedModule } from '../app/shared/shared.module';
 import { AdminModule } from '../app/admin/admin.module';
 import { LayoutModule } from './layout/layout.module';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     LayoutModule,
     BrowserModule,
     HttpClientModule,
     SharedModule,
+    AuthModule,
     AdminModule,
     AppRoutingModule,
     MatComponentsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     SurveyCreateService,
+    ToastrService,
     { provide: ErrorHandler, useClass: AppErrorHandler }
   ],
   bootstrap: [

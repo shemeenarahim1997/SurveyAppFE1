@@ -7,17 +7,17 @@ import { FormGroup, Validators, FormBuilder } from "@angular/forms";
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent{
-  _name = "Name";
-  _name_icon = "face";
-  _email = "Email";
-  p_holder_email = "Ex. abc@xyz.com";
-  _email_icon = "email";
-  _password = "Password";
+  name = "Name";
+  nameIcon = "face";
+  mail = "Email";
+  pholderEmail = "Ex. abc@xyz.com";
+  emailIcon = "email";
+  pswd = "Password";
   _type = "password"
-  _password_icon = "lock";
-  _cfpassword = "Confirm Password";
-  _cfp_icon = "enhanced_encryption";
-  button_label= "Sign Up";
+  pswdIcon = "lock";
+  cfPswd = "Confirm Password";
+  cfpIcon = "enhanced_encryption";
+  buttonLabel= "Sign Up";
 
   form: FormGroup;
   constructor(formBuilder: FormBuilder){

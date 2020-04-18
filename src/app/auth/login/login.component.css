@@ -1,6 +1,4 @@
- @import url('https://fonts.googleapis.com/css?family=Varela+Round');
-
-h2{
+ h2{
     font-family: 'Varela Round';
     font-weight: 600;
     color: rgb(27, 26, 77);
@@ -16,10 +14,8 @@ h2{
     width: 100%;
     text-align: center;
 }
+mat-icon{
+  padding-right: 30px;
+}
 
-mat-icon {
-  margin-right: 10px;
-}
-app-textfield {
-  width: 100%;
-}
+

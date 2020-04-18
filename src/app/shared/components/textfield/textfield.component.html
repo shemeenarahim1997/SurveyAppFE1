@@ -1,10 +1,9 @@
 <ng-content></ng-content>
-<mat-form-field appearance="none" [style.width.px]=327>
+<mat-form-field appearance="none">
   <mat-label>{{label}}</mat-label>
   <input matInput
     [placeholder]="placeholder"
     [type]="type"
-    class="form-control"
     [formControl]="ngControl.control">
   <mat-error
     *ngIf="ngControl.hasError('required')">

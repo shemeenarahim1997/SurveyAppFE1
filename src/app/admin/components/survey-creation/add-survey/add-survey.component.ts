@@ -1,6 +1,5 @@
-import { SurveyCreateService } from './../../../../shared/service/survey-create.service';
+import { SurveyCreateService } from '../../../services/survey-create.service';
 import { Router } from '@angular/router';
-import { BadRequest } from './../../../../shared/components/http-error-components/bad-request';
 import { AppError } from './../../../../shared/components/http-error-components/app-error';
 import { FormBuilder, Validators, NgForm } from '@angular/forms';
 import { Component, ViewChild } from '@angular/core';
@@ -13,10 +12,12 @@ import { FormGroup } from '@angular/forms';
 })
 
 export class AddSurveyComponent{
-  @ViewChild('myNgForm') public myNgForm: NgForm;
-  sur_name= "Survey Name";
-  plhr_sur_name= "Enter a name";
-  button_label= "Create";
+  @ViewChild('createSurForm') public createSurForm: NgForm;
+  surName= "Survey Name";
+  plhrSurName= "Enter a name";
+  buttonLabel= "Create";
+  desName= "Description";
+  plhrDes= "Write something about your survey...";
   form: FormGroup;
 
 
@@ -31,7 +32,6 @@ export class AddSurveyComponent{
   }
 
 
-
   get surveyName() {
     return this.form.get('survey_name');
   }
@@ -43,15 +43,12 @@ export class AddSurveyComponent{
     this.service.create(this.form.value)
     .subscribe(
       (response:any) => {
-      this.myNgForm.resetForm();
-      let survey_id = response._id;
-      this.router.navigate(['/new_survey/',survey_id]);
+      this.createSurForm.resetForm();
+      let surveyId = response._id;
+      this.router.navigate(['/newSurvey/',surveyId]);
       }, 
-      (error: AppError) => {
-        if(error instanceof BadRequest) {      
-          this.form.setErrors(error.originalError);      
-        }
-        else throw error;
+      (error: AppError) => { 
+        throw error;
     })
   }
 }
