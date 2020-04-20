@@ -8,16 +8,14 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatComponentsModule } from '../shared/components/mat-components/mat-components.module';
 import { ConfirmEqualValidatorDirective } from '../shared/service/confirm-equal-validator.directive';
-
-
-
-
+import { TokenInterceptor } from './token-interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
   declarations: [
     LoginComponent,
     SignUpComponent,
-    ConfirmEqualValidatorDirective
-  ],
+    ConfirmEqualValidatorDirective,
+],
   imports: [
     CommonModule,
     FormsModule,
@@ -25,9 +23,14 @@ import { ConfirmEqualValidatorDirective } from '../shared/service/confirm-equal-
     SharedModule,
     RouterModule,
     BrowserAnimationsModule,
-    MatComponentsModule
-  ],
+    MatComponentsModule,
+],
   providers: [
-  ]})
-  
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ]
+})
 export class AuthModule { }

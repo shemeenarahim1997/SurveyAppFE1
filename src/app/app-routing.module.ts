@@ -4,12 +4,16 @@ import { AddSurveyComponent } from './admin/components/survey-creation/add-surve
 import { AddQuestionOptionsComponent } from './admin/components/survey-creation/add-question-options/add-question-options.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
-
+import {TableComponent} from './shared/components/table/table.component';
 
 const routes: Routes = [
   { 
     path: '', 
     component: LoginComponent 
+  },
+  {
+    path:'table',
+    component:TableComponent
   },
   { 
     path: 'signUp', 

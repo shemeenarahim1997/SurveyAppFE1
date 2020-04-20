@@ -13,6 +13,8 @@ import { SharedModule } from '../app/shared/shared.module';
 import { AdminModule } from '../app/admin/admin.module';
 import { LayoutModule } from './layout/layout.module';
 import { ToastrModule } from 'ngx-toastr';
+import {TableModule} from 'primeng/table';
+
 
 
 @NgModule({
@@ -30,6 +32,9 @@ import { ToastrModule } from 'ngx-toastr';
     MatComponentsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    TableModule,
+    
+    
     ToastrModule.forRoot()
   ],
   providers: [
