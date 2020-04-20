@@ -6,16 +6,8 @@ import { Validators, FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
-  mail="Email";
-  pswd="Password";
-  pholderEmail="Enter your Email ID";
-  pholderPswd="Enter your password";
-  _type="password";
-  mailIcon="email";
-  pswdIcon="lock";
-  buttonLabel= "LogIn"
-
   form: FormGroup;
+  
   constructor(formBuilder: FormBuilder){
     this.form = formBuilder.group({
       email: formBuilder.control('',[Validators.required,Validators.email]),

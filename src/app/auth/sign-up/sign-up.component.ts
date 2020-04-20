@@ -7,19 +7,8 @@ import { FormGroup, Validators, FormBuilder } from "@angular/forms";
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent{
-  name = "Name";
-  nameIcon = "face";
-  mail = "Email";
-  pholderEmail = "Ex. abc@xyz.com";
-  emailIcon = "email";
-  pswd = "Password";
-  _type = "password"
-  pswdIcon = "lock";
-  cfPswd = "Confirm Password";
-  cfpIcon = "enhanced_encryption";
-  buttonLabel= "Sign Up";
-
   form: FormGroup;
+  
   constructor(formBuilder: FormBuilder){
     this.form = formBuilder.group({
       firstName: formBuilder.control('',[Validators.required,Validators.minLength(3),Validators.maxLength(15)]),

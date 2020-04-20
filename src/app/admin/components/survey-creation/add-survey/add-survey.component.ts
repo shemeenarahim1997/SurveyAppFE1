@@ -13,13 +13,7 @@ import { FormGroup } from '@angular/forms';
 
 export class AddSurveyComponent{
   @ViewChild('createSurForm') public createSurForm: NgForm;
-  surName= "Survey Name";
-  plhrSurName= "Enter a name";
-  buttonLabel= "Create";
-  desName= "Description";
-  plhrDes= "Write something about your survey...";
   form: FormGroup;
-
 
   constructor(
     formBuilder: FormBuilder, 

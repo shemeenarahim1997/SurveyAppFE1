@@ -7,7 +7,8 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatComponentsModule } from '../shared/components/mat-components/mat-components.module';
-import { ConfirmEqualValidatorDirective } from '../shared/service/confirm_equal_validator.directive';
+import { ConfirmEqualValidatorDirective } from '../shared/service/confirm-equal-validator.directive';
+
 
 
 
@@ -28,4 +29,5 @@ import { ConfirmEqualValidatorDirective } from '../shared/service/confirm_equal_
   ],
   providers: [
   ]})
+  
 export class AuthModule { }

@@ -10,7 +10,7 @@
     {{ label }} must be required
   </mat-error>
   <mat-error
-    *ngIf="ngControl.hasError('minlength')">
+    *ngIf="ngControl.hasError('minlength') && !ngControl.hasError('notEqual')">
     Minimum characters should be
     {{ngControl.errors['minlength'].requiredLength}}
   </mat-error>

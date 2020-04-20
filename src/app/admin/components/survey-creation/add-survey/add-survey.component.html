@@ -2,19 +2,19 @@
     (ngSubmit)="createSurvey()" #createSurForm="ngForm">
     <h1>Create your own survey</h1>
     <app-textfield
-        [label]="surName"
+        label="Survey Name"
         [formControl]="form.controls['survey_name']"
-        [placeholder]="plhrSurName">
+        placeholder="Enter a name">
         </app-textfield>
     <br>
     <app-text-area
-        [label]="desName"
+        label="Description"
         [formControl]="form.controls['survey_description']"
-        [placeholder]= "plhrDes">
+        placeholder= "Write something about your survey...">
     </app-text-area>
     <br>
     <br>
-    <app-button [btnLabel]="buttonLabel"></app-button>
+    <app-button btnLabel="Create"></app-button>
     <div>
     </div>
 </form>

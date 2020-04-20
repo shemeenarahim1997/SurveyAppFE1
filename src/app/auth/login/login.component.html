@@ -1,17 +1,17 @@
 <form class="form-class" [formGroup]="form">
   <h2>LOGIN</h2>
-  <app-textfield [label]="mail" [formControl]="form.controls['email']"
-    [placeholder]="pholderEmail">
-    <mat-icon>{{mailIcon}}</mat-icon>
+  <app-textfield label="Email" [formControl]="form.controls['email']"
+    placeholder="Enter your Email ID">
+    <mat-icon>mail</mat-icon>
   </app-textfield>
   <br>
-  <app-textfield [label]="pswd" [formControl]="form.controls['password']"
-    [placeholder]="pholderPswd" [type]="_type">
-    <mat-icon>{{pswdIcon}}</mat-icon>
+  <app-textfield label="Password" [formControl]="form.controls['password']"
+    placeholder="Enter your password" type="password">
+    <mat-icon>lock</mat-icon>
   </app-textfield>
   <br>
   <br>
-  <app-button [btnLabel]="buttonLabel"></app-button>
+  <app-button btnLabel="LOG IN"></app-button>
   <br>
   <br>
   <a routerLink="/signUp">Create a new account</a>
