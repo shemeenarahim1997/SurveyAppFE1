@@ -1,19 +1,28 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// import { HeaderComponent } from './header/header.component';
-import { ButtonComponent } from './shared/components/button/button.component';
-import { TextfieldComponent } from './shared/components/textfield/textfield.component';
-import { HeaderComponent } from './layout/components/header/header.component';
-import { DemoComponent } from './demo/demo.component';
-import { LoginComponent } from './admin/components/login/login.component';
-import { TableComponent } from '../app/table/table.component';
+import { AddSurveyComponent } from './admin/components/survey-creation/add-survey/add-survey.component';
+import { AddQuestionOptionsComponent } from './admin/components/survey-creation/add-question-options/add-question-options.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+
+
 const routes: Routes = [
-  { path: 'button', component:ButtonComponent },
-  { path: 'text', component: TextfieldComponent },
-  { path: 'header', component: HeaderComponent  },
-  {path:'demo',component:DemoComponent},
-  {path:'',component:LoginComponent},
-  {path:'table',component: TableComponent}
+  { 
+    path: '', 
+    component: LoginComponent 
+  },
+  { 
+    path: 'signUp', 
+    component: SignUpComponent 
+  },
+  { 
+    path: 'newSurvey', 
+    component: AddSurveyComponent 
+  },
+  { 
+    path: 'newSurvey/:surveyId', 
+    component: AddQuestionOptionsComponent
+  }
 ];
 
 @NgModule({

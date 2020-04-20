@@ -1,5 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css";
-body{
-    padding:20px;
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "https://fonts.googleapis.com/css?family=Varela+Round";
+@import "../node_modules//ngx-toastr/toastr.css";
+
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    background-color: rgb(220, 235, 235);
 }

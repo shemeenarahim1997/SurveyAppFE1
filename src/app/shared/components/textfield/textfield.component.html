@@ -1,1 +1,29 @@
-<input type="text" value="enter your values"/>
+<ng-content></ng-content>
+<mat-form-field appearance="none">
+  <mat-label>{{label}}</mat-label>
+  <input matInput
+    [placeholder]="placeholder"
+    [type]="type"
+    [formControl]="ngControl.control">
+  <mat-error
+    *ngIf="ngControl.hasError('required')">
+    {{ label }} must be required
+  </mat-error>
+  <mat-error
+    *ngIf="ngControl.hasError('minlength') && !ngControl.hasError('notEqual')">
+    Minimum characters should be
+    {{ngControl.errors['minlength'].requiredLength}}
+  </mat-error>
+  <mat-error *ngIf="ngControl.hasError('maxlength')">
+    Name should not exceed {{ngControl.errors['maxlength'].requiredLength}}
+    characters
+  </mat-error>
+  <mat-error *ngIf="ngControl.hasError('email') &&
+    !ngControl.hasError('required')">
+    Please enter a valid email address
+  </mat-error>
+  <mat-error *ngIf="ngControl.hasError('notEqual') &&
+    !ngControl.hasError('required')">
+    Passwords doesn't match.
+  </mat-error>
+</mat-form-field>

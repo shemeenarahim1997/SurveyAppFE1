@@ -1,0 +1,24 @@
+h1{
+    font-family: 'Varela Round';
+    font-weight: 600;
+    color: rgb(27, 26, 77);
+    text-shadow: 0 .5rem 1rem rgba(50, 0, 100, .1);
+    font-size: 2rem;
+    padding: 40px;
+}
+
+.form-class {
+    color: rgb(0, 0, 0);
+    background-color: rgba(137, 212, 247, 0.178);
+    height: 100%;
+    text-align: center;
+}
+
+
+mat-form-field {
+    width: 327px;
+}
+
+div{
+    margin-top: 20px;
+}
