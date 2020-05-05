@@ -33,7 +33,7 @@ import {TableModule} from 'primeng/table';
     BrowserAnimationsModule,
     HttpClientModule,
     TableModule,
-    
+     
     
     ToastrModule.forRoot()
   ],

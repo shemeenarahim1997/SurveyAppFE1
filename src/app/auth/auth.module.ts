@@ -10,6 +10,7 @@ import { MatComponentsModule } from '../shared/components/mat-components/mat-com
 import { ConfirmEqualValidatorDirective } from '../shared/service/confirm-equal-validator.directive';
 import { TokenInterceptor } from './token-interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import {TableModule} from 'primeng/table';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -24,6 +25,9 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     RouterModule,
     BrowserAnimationsModule,
     MatComponentsModule,
+    TableModule
+    
+
 ],
   providers: [
     {

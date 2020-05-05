@@ -29,7 +29,9 @@ import {TableModule} from 'primeng/table';
     MatComponentsModule,
     ButtonComponent,
     TextfieldComponent,
-    TextAreaComponent
+    TextAreaComponent,
+    TableComponent
+
   ]
 })
 export class SharedModule { }

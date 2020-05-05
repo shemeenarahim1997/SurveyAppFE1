@@ -5,6 +5,7 @@ import { AddQuestionOptionsComponent } from './admin/components/survey-creation/
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import {TableComponent} from './shared/components/table/table.component';
+import {ViewListComponent} from './admin/components/view-list/view-list.component';
 
 const routes: Routes = [
   { 
@@ -13,7 +14,7 @@ const routes: Routes = [
   },
   {
     path:'table',
-    component:TableComponent
+    component:ViewListComponent
   },
   { 
     path: 'signUp', 
@@ -27,6 +28,7 @@ const routes: Routes = [
     path: 'newSurvey/:surveyId', 
     component: AddQuestionOptionsComponent
   }
+
 ];
 
 @NgModule({
