@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ViewlistService {
-  private url="http://localhost:8080/surveys";
+  url;
   constructor(private http: HttpClient) { }
   getPosts()
   {

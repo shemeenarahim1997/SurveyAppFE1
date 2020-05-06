@@ -13,8 +13,4 @@ constructor(private http: HttpClient) { }
      return this.http.get(url);
    
   }
-  // getPostId(url,resourceId)
-  // {
-  //   return this.http.get(url+resourceId);
-  // }
-}
+ }

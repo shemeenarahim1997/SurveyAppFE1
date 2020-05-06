@@ -1,9 +1,5 @@
 import { Component, Self, Input} from '@angular/core';
 import { NgControl, ControlValueAccessor } from '@angular/forms';
-
-
-
-
 @Component({
   selector: 'app-textfield',
   templateUrl: './textfield.component.html',
@@ -19,8 +15,6 @@ export class TextfieldComponent implements ControlValueAccessor {
   ) {
     this.ngControl.valueAccessor = this;
   }
-
-  //ControlValueAccessor interface
   writeValue(obj: any) {  }
 
   registerOnChange(fn: any) { }

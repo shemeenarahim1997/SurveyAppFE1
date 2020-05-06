@@ -10,14 +10,12 @@ import { AddSurveyComponent } from './components/survey-creation/add-survey/add-
 import { AddQuestionOptionsComponent } from './components/survey-creation/add-question-options/add-question-options.component';
 import { ViewListComponent } from './components/view-list/view-list.component';
 import {TableModule} from 'primeng/table';
-
 @NgModule({
   declarations: [
     AddSurveyComponent,
     AddQuestionOptionsComponent,
-    ViewListComponent,
-   
-  ],
+    ViewListComponent
+   ],
   imports: [
     CommonModule,
     FormsModule,

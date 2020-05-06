@@ -14,9 +14,6 @@ import { AdminModule } from '../app/admin/admin.module';
 import { LayoutModule } from './layout/layout.module';
 import { ToastrModule } from 'ngx-toastr';
 import {TableModule} from 'primeng/table';
-
-
-
 @NgModule({
   declarations: [
     AppComponent
@@ -33,9 +30,7 @@ import {TableModule} from 'primeng/table';
     BrowserAnimationsModule,
     HttpClientModule,
     TableModule,
-     
-    
-    ToastrModule.forRoot()
+  ToastrModule.forRoot()
   ],
   providers: [
     SurveyCreateService,

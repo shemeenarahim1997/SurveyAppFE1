@@ -1,7 +1,6 @@
   <p-table [value]="values">
     <ng-template pTemplate="caption">
 {{title}}
-      <!-- Survey_list -->
     </ng-template>
     <ng-template pTemplate="header">
         <tr>
@@ -13,7 +12,12 @@
     <ng-template pTemplate="body" let-value>
         <tr>
          <td *ngFor="let col of cols">
+             <div *ngIf="!col.header">
+                 <a href='/'>Edit</a>
+             </div>
+             <div class="float-right">
                  {{value[col.field]}}
+            </div>
                 </td>
           </tr>
     </ng-template>
