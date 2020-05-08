@@ -13,8 +13,7 @@ import { SharedModule } from '../app/shared/shared.module';
 import { AdminModule } from '../app/admin/admin.module';
 import { LayoutModule } from './layout/layout.module';
 import { ToastrModule } from 'ngx-toastr';
-
-
+import {TableModule} from 'primeng/table';
 @NgModule({
   declarations: [
     AppComponent
@@ -30,7 +29,8 @@ import { ToastrModule } from 'ngx-toastr';
     MatComponentsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    TableModule,
+  ToastrModule.forRoot()
   ],
   providers: [
     SurveyCreateService,

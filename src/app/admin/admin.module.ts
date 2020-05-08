@@ -8,12 +8,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddSurveyComponent } from './components/survey-creation/add-survey/add-survey.component';
 import { AddQuestionOptionsComponent } from './components/survey-creation/add-question-options/add-question-options.component';
-
+import { ViewListComponent } from './components/view-list/view-list.component';
+import {TableModule} from 'primeng/table';
 @NgModule({
   declarations: [
     AddSurveyComponent,
-    AddQuestionOptionsComponent
-  ],
+    AddQuestionOptionsComponent,
+    ViewListComponent
+   ],
   imports: [
     CommonModule,
     FormsModule,
@@ -21,7 +23,8 @@ import { AddQuestionOptionsComponent } from './components/survey-creation/add-qu
     SharedModule,
     RouterModule,
     BrowserAnimationsModule,
-    MatComponentsModule
+    MatComponentsModule,
+    TableModule
   ],
   providers: [
   ]})

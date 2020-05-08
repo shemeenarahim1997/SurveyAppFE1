@@ -8,13 +8,38 @@ export class AppErrorHandler extends ErrorHandler {
 ) {
     super();
 }
-handleError(error) { 
-    this.toastrService.error(error.originalError.name || "An unknown ERROR occured !", "ERROR", { onActivateTick: true })
-}
 
 private get toastrService(): ToastrService {
     return this.injector.get(ToastrService);
 }
+handleError(error) { 
+    
+    console.log(error);
+    if(error.originalError.error.text){
+    console.log(error);
+    this.toastrService.error(
+        "Login Failed",
+        "Error",
+        {
+          closeButton: true,
+          timeOut: 5000,
+          onActivateTick: true
+        }
+    );
+
+    }
+    else{
+    this.toastrService.error(
+        "Something went wrong!please try later",
+        "Error",
+        {
+          closeButton: true,
+          timeOut: 5000,
+          onActivateTick: true
+        }
+    );
+    }
 
 }
 
+}

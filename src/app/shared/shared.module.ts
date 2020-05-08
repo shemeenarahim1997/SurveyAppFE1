@@ -6,24 +6,30 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TextfieldComponent } from './components/textfield/textfield.component';
 import { ButtonComponent } from './components/button/button.component';
 import { TextAreaComponent } from './components/text-area/text-area.component';
+import { TableComponent } from './components/table/table.component';
+import {TableModule} from 'primeng/table';
 @NgModule({
   declarations: [
   TextfieldComponent,
   ButtonComponent,
-  TextAreaComponent
+  TextAreaComponent,
+  TableComponent
 ],
   imports: [
     CommonModule,
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,
-    MatComponentsModule
-  ],
+    MatComponentsModule,
+    TableModule
+    ],
   exports:[
     MatComponentsModule,
     ButtonComponent,
     TextfieldComponent,
-    TextAreaComponent
+    TextAreaComponent,
+    TableComponent
+
   ]
 })
 export class SharedModule { }
