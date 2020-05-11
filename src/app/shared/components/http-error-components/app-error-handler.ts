@@ -8,8 +8,9 @@ export class AppErrorHandler extends ErrorHandler {
 ) {
     super();
 }
-handleError(error) { 
-    this.toastrService.error(error.originalError.name || "An unknown ERROR occured !", "ERROR", { onActivateTick: true })
+handleError(error) {
+    console.log(error);
+    this.toastrService.error("Something went wrong. Try again!", "ERROR", { onActivateTick: true })
 }
 
 private get toastrService(): ToastrService {

@@ -1,0 +1,29 @@
+<div class="container">
+<h1>Create your own survey</h1>
+<div [ngSwitch]="activeIndex">
+    <p-steps
+        [model]="items"
+        [(activeIndex)]="activeIndex"
+        [readonly]="surveyPublished">
+    </p-steps>
+
+    <div *ngSwitchCase="0">
+        <survey-form (surveyCreated)="surveyCreated($event)"></survey-form>
+    </div>
+    <div *ngSwitchCase="1">
+        <question-form></question-form>
+        <app-button class="submit-button" type="button" (click)="surveySubmitted()" btnLabel="Submit Survey"></app-button>
+    </div>
+    <div *ngSwitchCase="2">
+        <div style="padding: 10px;">
+            <app-table
+                url="http://localhost:8080/users"
+                [cols]="columns"
+                [isSelectable]="true"
+                btnText="Invite"
+                (select)="inviteUsers($event)">
+            </app-table>
+        </div>
+    </div>
+</div>
+</div>

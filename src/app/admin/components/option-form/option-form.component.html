@@ -1,0 +1,13 @@
+<form  class="form-class" [formGroup]="optionForm"
+(ngSubmit)="addOption()" #optForm="ngForm">
+<app-textfield 
+    label="Option Label"
+    [formControl]="optionForm.controls['optionLabel']"
+    placeholder="Enter an option">
+</app-textfield>
+<br>
+<br>
+<app-button *ngIf="!updateOption" type="ngSubmit" btnLabel="Add Option"></app-button>
+<app-button *ngIf="updateOption" type="ngSubmit" btnLabel="Save Option"></app-button>
+<app-button type="button" (click)="addNextQuestion()" btnLabel="Add Next Question"></app-button>
+</form>

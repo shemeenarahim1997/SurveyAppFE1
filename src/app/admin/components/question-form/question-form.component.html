@@ -1,0 +1,41 @@
+<card
+    *ngIf="surveyId"
+    (editQuestionEmitter)="editQuestion($event)"
+    (AddOptionEmitter)="addOptionToggler($event)"
+    (deleteQuestionEmitter)="deleteQuestion($event)"
+    (OptionChangeEmitter)="updateOption($event)"
+    [questionSet]="questionSet">
+</card>
+<div *ngIf="!updateOpt && !addOption" class="question-form-container">
+    <h2 *ngIf='!isEditing'>Add a new question</h2>
+    <h2 *ngIf='isEditing'>Edit the question</h2>
+    <form class="form-class" [formGroup]="questionForm"
+    (ngSubmit)="addQuestion()" #questForm="ngForm">
+    <app-text-area
+        label="Question"
+        [formControl]="questionForm.controls['question']"
+        placeholder="Type your question here">
+    </app-text-area>
+    <br>
+    <mat-form-field appearance="none">
+        <mat-label>Option Type</mat-label>
+        <mat-select [formControl]="questionType" required>
+            <mat-option value="CHECK_BOX" selected>Check Box</mat-option>
+            <mat-option value="RADIO_BUTTON">Radio Button</mat-option>
+            <mat-option value="DROP_DOWN">Drop Down</mat-option>
+            <mat-option value="TEXT_BOX">Text Box</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br><br>
+    <app-button *ngIf='!isEditing' btnLabel="Add Question"></app-button>
+    <app-button *ngIf='isEditing' btnLabel="Save Question"></app-button>
+</form>
+</div>
+<div *ngIf="addOption || updateOpt" class="option-form-container">
+    <h2 *ngIf="!updateOpt"> Add Options to Question: {{currentQuestion }}</h2>
+    <h2 *ngIf="updateOpt"> Edit Option: </h2>
+    <option-form
+        [updateOption]="updateOpt"
+        (eventEmitter)="optionEvents($event)">
+    </option-form>
+</div>

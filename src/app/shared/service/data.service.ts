@@ -16,7 +16,7 @@ export class DataService {
       catchError(error => throwError(new AppError(error))))
   }
   update(resource){
-    return this.http.patch(this.url, resource).pipe(
+    return this.http.put(this.url, resource).pipe(
       catchError(error => throwError(new AppError(error))))
   }
   delete(resource){

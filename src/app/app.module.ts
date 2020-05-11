@@ -1,6 +1,5 @@
 import { ToastrService } from 'ngx-toastr';
 import { AuthModule } from './auth/auth.module';
-import { SurveyCreateService } from './admin/services/survey-create.service';
 import { AppErrorHandler } from './shared/components/http-error-components/app-error-handler';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatComponentsModule } from './shared/components/mat-components/mat-components.module';
@@ -33,7 +32,6 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot()
   ],
   providers: [
-    SurveyCreateService,
     ToastrService,
     { provide: ErrorHandler, useClass: AppErrorHandler }
   ],

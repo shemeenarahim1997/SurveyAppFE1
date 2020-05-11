@@ -1,0 +1,12 @@
+.question-form-container{
+    width: 75%;
+    margin: 0 auto;
+    border: 5px solid rgba(75, 74, 82, 0.308);
+    margin-top: 30px;
+}
+form{
+    margin: 30px;
+}
+h2{
+    text-align: center;
+}

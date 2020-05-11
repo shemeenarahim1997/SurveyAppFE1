@@ -1,0 +1,53 @@
+
+<div *ngIf="!isSelectable" class="table-container">
+    <p-table [value]="values">
+        <ng-template pTemplate="caption">
+    {{title}}
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th *ngFor="let col of cols">
+                    {{col.header}}
+                </th>
+             </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-value>
+            <tr>
+             <td *ngFor="let col of cols">
+                     {{value[col.field]}}
+                    </td>
+              </tr>
+        </ng-template>
+    </p-table>       
+</div>
+<div *ngIf="isSelectable" class="table-container">
+    <p-table
+    [columns]="cols"
+    [value]="values"
+    selectionMode="multiple"
+    [(selection)]="selectedUsers">
+    <ng-template pTemplate="header">
+        <tr>
+            <th class="checkbox" >
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th *ngFor="let col of cols">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr >
+            <td>
+                <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+            </td>
+            <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table><br>
+<br>
+<app-button  (click)="onSelect()" [btnLabel]="btnText"></app-button>
+</div>
+
