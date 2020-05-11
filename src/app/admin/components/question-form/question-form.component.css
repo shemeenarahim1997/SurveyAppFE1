@@ -1,4 +1,4 @@
-.question-form-container{
+.question-form-container,.option-form-container{
     width: 75%;
     margin: 0 auto;
     border: 5px solid rgba(75, 74, 82, 0.308);

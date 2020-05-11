@@ -1,12 +1,12 @@
-import { OptionService } from './../../../admin/services/option.service';
+import { OptionService } from '../../services/option.service';
 import { Router } from '@angular/router';
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 
 @Component({
-  selector: 'card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'card-view',
+  templateUrl: './card-view.component.html',
+  styleUrls: ['./card-view.component.css']
 })
 export class CardComponent {
   @Output() editQuestionEmitter = new EventEmitter();

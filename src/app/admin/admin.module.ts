@@ -1,3 +1,4 @@
+import { CardComponent } from './components/card-view/card-view.component';
 import { OptionService } from './services/option.service';
 import { QuestionService } from './services/question.service';
 import { SurveyService } from './services/survey.service';
@@ -20,7 +21,8 @@ import { CardModule } from 'primeng/card';
     CreateSurveyComponent,
     SurveyFormComponent,
     QuestionFormComponent,
-    OptionFormComponent
+    OptionFormComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,

@@ -10,8 +10,6 @@ import { ButtonComponent } from './components/button/button.component';
 import { TextAreaComponent } from './components/text-area/text-area.component';
 import { TableComponent } from './components/table/table.component';
 import {TableModule} from 'primeng/table';
-import { CardComponent } from './components/card/card.component';
-import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -19,7 +17,6 @@ import {CardModule} from 'primeng/card';
   ButtonComponent,
   TextAreaComponent,
   TableComponent,
-  CardComponent
 ],
   imports: [
     CommonModule,
@@ -28,7 +25,6 @@ import {CardModule} from 'primeng/card';
     ReactiveFormsModule,
     MatComponentsModule,
     TableModule,
-    CardModule
   ],
   exports:[
     MatComponentsModule,
@@ -36,7 +32,6 @@ import {CardModule} from 'primeng/card';
     TextfieldComponent,
     TextAreaComponent,
     TableComponent,
-    CardComponent
   ],
   providers:[
     TableService,

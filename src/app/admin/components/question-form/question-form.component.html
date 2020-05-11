@@ -1,11 +1,11 @@
-<card
+<card-view
     *ngIf="surveyId"
     (editQuestionEmitter)="editQuestion($event)"
     (AddOptionEmitter)="addOptionToggler($event)"
     (deleteQuestionEmitter)="deleteQuestion($event)"
     (OptionChangeEmitter)="updateOption($event)"
     [questionSet]="questionSet">
-</card>
+</card-view>
 <div *ngIf="!updateOpt && !addOption" class="question-form-container">
     <h2 *ngIf='!isEditing'>Add a new question</h2>
     <h2 *ngIf='isEditing'>Edit the question</h2>
