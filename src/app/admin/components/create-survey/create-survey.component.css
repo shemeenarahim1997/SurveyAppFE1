@@ -9,6 +9,9 @@
     
 }
 
+body .ui-steps .ui-steps-item .ui-menuitem-link:focus {
+    box-shadow: none;
+}
 
 /* .ui-steps.steps-custom .ui-steps-item .ui-menuitem-link {
     padding: 0 0.5em;

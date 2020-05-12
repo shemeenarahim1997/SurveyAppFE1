@@ -35,7 +35,7 @@ export class OptionFormComponent implements OnInit{
       this.questionId = params['qId'];
       this.optionId = params['optId'];
     });
-    if(this.updateOption) {
+    if(this.optionId) {
       this.optionService.getOption(this.optionId).subscribe(response=> {
         this.currentOption = response;
         this.optionForm.patchValue({
