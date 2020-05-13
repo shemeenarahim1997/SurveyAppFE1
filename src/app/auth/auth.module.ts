@@ -15,7 +15,7 @@ import {TableModule} from 'primeng/table';
   declarations: [
     LoginComponent,
     SignUpComponent,
-    ConfirmEqualValidatorDirective,
+    ConfirmEqualValidatorDirective
 ],
   imports: [
     CommonModule,

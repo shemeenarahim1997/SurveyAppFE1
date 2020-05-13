@@ -1,10 +1,11 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
-      mode="push"
-      [opened]="opened">
+    mode="push"
+    [opened]="opened">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink='/newSurvey' (click)="drawer.toggle()">Create Survey</a>
+      <a mat-list-item routerLink='/newSurvey' (click)="drawer.toggle()">Create
+        Survey</a>
       <a mat-list-item routerLink="#">Attend Survey</a>
       <a mat-list-item routerLink="#">View Results</a>
     </mat-nav-list>
@@ -16,10 +17,19 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="!opened">
+        *ngIf="!opened && loginStatus">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>SurveyApp</span>
+      <span class="example-fill-remaining-space"></span>
+      <span *ngIf="!loginStatus">
+        <a routerLink='/login' >Login</a>
+        <a routerLink='/signUp'>Signup</a>
+      </span>
+      <span *ngIf="loginStatus">
+        <span class="username">Hi, {{userName}}</span>
+        <a  (click)="onLogOut()">Logout</a>
+      </span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>

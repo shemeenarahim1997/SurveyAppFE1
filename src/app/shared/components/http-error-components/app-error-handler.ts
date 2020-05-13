@@ -15,7 +15,7 @@ private get toastrService(): ToastrService {
 handleError(error) { 
     
     console.log(error);
-    if(error.originalError.error.text){
+    if(error.originalError){
     console.log(error);
     this.toastrService.error(
         "Login Failed",

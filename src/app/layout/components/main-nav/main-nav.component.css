@@ -20,3 +20,37 @@
 span{
   padding-left: inherit;
 }
+.example-fill-remaining-space {
+  flex: auto;
+}
+/* a{
+  margin-right: 1%;
+} */
+.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
+  color: white;
+  background-color: transparent;
+}
+/* button:focus {
+  outline: none !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+} */
+
+mat-toolbar a{
+display: inline-block;
+margin: 0 10px;
+color: white;
+text-decoration: none;
+font-family: Roboto, "Helvetica Neue", sans-serif;
+font-size: 14px;
+font-weight: 500;
+padding-right: 10px;
+cursor: pointer;
+}
+.username{
+font-family: Roboto, "Helvetica Neue", sans-serif;
+font-size: 14px;
+font-weight: 500;
+padding-right: 10%;
+}
