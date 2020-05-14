@@ -1,3 +1,4 @@
+import { InviteService } from './../../services/invite.service';
 import { SurveyService } from './../../services/survey.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MenuItem } from 'primeng/api';
@@ -21,9 +22,12 @@ export class CreateSurveyComponent implements OnInit {
     { field: 'username', header: 'User Name ' },
     { field: 'email', header: 'Email' },
   ];
-  selectedUsers;
 
-  constructor(private router: Router, private route: ActivatedRoute, private surveyService: SurveyService) { }
+  constructor(
+    private router: Router, 
+    private route: ActivatedRoute, 
+    private inviteService: InviteService,
+    private surveyService: SurveyService) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
@@ -83,7 +87,6 @@ export class CreateSurveyComponent implements OnInit {
     this.surveyService.editSurvey(this.surveyId,{
       survey_published: true
     }).subscribe();
-    this.selectedUsers = users;
-    console.log(this.selectedUsers);
+    this.inviteService.inviteUsers(users,this.surveyId).subscribe();
   }
 }

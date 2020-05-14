@@ -1,3 +1,4 @@
+import { InviteService } from './services/invite.service';
 import { CardComponent } from './components/card-view/card-view.component';
 import { OptionService } from './services/option.service';
 import { QuestionService } from './services/question.service';
@@ -38,6 +39,7 @@ import { CardModule } from 'primeng/card';
   providers: [
     SurveyService,
     QuestionService,
-    OptionService
+    OptionService,
+    InviteService
   ]})
 export class AdminModule { }
