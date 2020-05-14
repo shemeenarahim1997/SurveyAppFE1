@@ -1,3 +1,4 @@
+import { AuthGuardService as AuthGuard } from './shared/service/auth-guard.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddSurveyComponent } from './admin/components/survey-creation/add-survey/add-survey.component';
@@ -7,12 +8,13 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import {ViewListComponent} from './admin/components/view-list/view-list.component';
 const routes: Routes = [
   { 
-    path: '', 
+    path: 'login', 
     component: LoginComponent 
   },
   {
     path:'table',
-    component: ViewListComponent
+    component: ViewListComponent,
+    canActivate: [AuthGuard]
   },
   { 
     path: 'signUp', 
@@ -20,11 +22,13 @@ const routes: Routes = [
   },
   { 
     path: 'newSurvey', 
-    component: AddSurveyComponent 
+    component: AddSurveyComponent,
+    canActivate: [AuthGuard]
   },
   { 
     path: 'newSurvey/:surveyId', 
-    component: AddQuestionOptionsComponent
+    component: AddQuestionOptionsComponent,
+    canActivate: [AuthGuard]
   }
  ];
 

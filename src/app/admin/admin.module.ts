@@ -1,4 +1,3 @@
-import { TextAreaComponent } from './../shared/components/text-area/text-area.component';
 import { RouterModule } from '@angular/router';
 import { MatComponentsModule } from './../shared/components/mat-components/mat-components.module';
 import { NgModule } from '@angular/core';
@@ -25,7 +24,5 @@ import {TableModule} from 'primeng/table';
     BrowserAnimationsModule,
     MatComponentsModule,
     TableModule
-  ],
-  providers: [
   ]})
 export class AdminModule { }

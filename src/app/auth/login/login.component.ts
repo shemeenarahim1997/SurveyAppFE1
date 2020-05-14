@@ -1,6 +1,7 @@
+import { AuthService } from './../../shared/service/auth.service';
 import { Component ,ViewChild} from '@angular/core';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import {AppError} from './../../../app/shared/components/http-error-components/app-error';
 import {LoginService} from '../../auth/service/login.service';
 import { NgForm,Validators, FormBuilder, FormGroup} from '@angular/forms';
@@ -13,7 +14,12 @@ export class LoginComponent{
   @ViewChild('loginForm') public loginForm:NgForm;
   form: FormGroup;
  
-  constructor(formBuilder: FormBuilder,private loginService: LoginService,private router:Router){
+  constructor(
+    formBuilder: FormBuilder,
+    private loginService: LoginService,
+    private router:Router,
+    private authService:AuthService,
+    private route: ActivatedRoute){
   
     this.form = formBuilder.group({
       email: formBuilder.control('',[Validators.required,Validators.email]),
@@ -31,15 +37,15 @@ export class LoginComponent{
       'Content-Type':'application/json'
     })
   };
-onSubmit(user)
+onSubmit()
 {
-let json=JSON.stringify(user);
-console.log(json);
 this.loginService.create(this.form.value)
 .subscribe(response=>{
-  console.log(response);
-localStorage.setItem('token',response['token']);
-  this.router.navigate(['/table']);
+  localStorage.setItem('token',response['token']);
+  localStorage.setItem('user',response['username']);
+  this.authService.logIn();
+  let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl');
+  this.router.navigate([returnUrl || '/newSurvey']);
 },
 (error: AppError) => { 
   throw error;

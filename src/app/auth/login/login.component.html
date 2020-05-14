@@ -1,5 +1,5 @@
 <form class="form-class" [formGroup]="form" 
-(ngSubmit)="onSubmit(form.value)">
+(ngSubmit)="onSubmit()">
   <h2>LOGIN</h2>
   <app-textfield label="Email" [formControl]="form.controls['email']"
     placeholder="Enter your Email ID">
