@@ -16,7 +16,7 @@ import {TableModule} from 'primeng/table';
   TextfieldComponent,
   ButtonComponent,
   TextAreaComponent,
-  TableComponent,
+  TableComponent
 ],
   imports: [
     CommonModule,
@@ -24,14 +24,15 @@ import {TableModule} from 'primeng/table';
     BrowserModule,
     ReactiveFormsModule,
     MatComponentsModule,
-    TableModule,
+    TableModule
   ],
+
   exports:[
     MatComponentsModule,
     ButtonComponent,
     TextfieldComponent,
     TextAreaComponent,
-    TableComponent,
+    TableComponent
   ],
   providers:[
     TableService,

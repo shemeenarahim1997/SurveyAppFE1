@@ -16,6 +16,8 @@ import { SurveyFormComponent } from './components/survey-form/survey-form.compon
 import { QuestionFormComponent } from './components/question-form/question-form.component';
 import { OptionFormComponent } from './components/option-form/option-form.component';
 import { CardModule } from 'primeng/card';
+import { ViewListComponent } from './components/view-list/view-list.component';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { CardModule } from 'primeng/card';
     SurveyFormComponent,
     QuestionFormComponent,
     OptionFormComponent,
-    CardComponent
+    CardComponent,
+    ViewListComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,8 @@ import { CardModule } from 'primeng/card';
     BrowserAnimationsModule,
     MatComponentsModule,
     StepsModule,
-    CardModule
+    CardModule,
+    TableModule
   ],
   providers: [
     SurveyService,
