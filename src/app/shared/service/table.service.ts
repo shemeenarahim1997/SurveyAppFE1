@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Component, OnInit,Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -7,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TableService {
 
-constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
   getPosts(url)
   { 
      return this.http.get(url);
    
   }
- }
+}

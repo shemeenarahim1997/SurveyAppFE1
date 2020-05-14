@@ -1,3 +1,5 @@
+import { ConfirmEqualValidatorDirective } from './service/confirm-equal-validator.directive';
+import { TableService } from './service/table.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatComponentsModule } from './components/mat-components/mat-components.module';
 import { NgModule } from '@angular/core';
@@ -8,6 +10,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { TextAreaComponent } from './components/text-area/text-area.component';
 import { TableComponent } from './components/table/table.component';
 import {TableModule} from 'primeng/table';
+
 @NgModule({
   declarations: [
   TextfieldComponent,
@@ -22,14 +25,18 @@ import {TableModule} from 'primeng/table';
     ReactiveFormsModule,
     MatComponentsModule,
     TableModule
-    ],
+  ],
+
   exports:[
     MatComponentsModule,
     ButtonComponent,
     TextfieldComponent,
     TextAreaComponent,
     TableComponent
-
+  ],
+  providers:[
+    TableService,
+    ConfirmEqualValidatorDirective
   ]
 })
 export class SharedModule { }

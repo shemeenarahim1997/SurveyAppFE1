@@ -1,0 +1,22 @@
+<div class="question-form-container">
+    <h2 *ngIf='!surveyId'>Add Survey Details</h2>
+    <h2 *ngIf='surveyId'>Edit Survey Details</h2>
+    <form class="form-class" [formGroup]="surveyForm"
+    (ngSubmit)="createSurvey()" #createSurForm="ngForm">
+    <app-textfield
+        label="Survey Name"
+        [(formControl)]="surveyForm.controls['survey_name']"
+        placeholder="Enter a name">
+    </app-textfield>
+    <br>
+    <app-text-area
+        label="Description"
+        [formControl]="surveyForm.controls['survey_description']"
+        placeholder="Write something about your survey...">
+    </app-text-area>
+    <br>
+    <br>
+    <app-button *ngIf='!surveyId' btnLabel="Add Survey"></app-button>
+    <app-button *ngIf='surveyId' btnLabel="Save"></app-button>
+</form>
+</div>

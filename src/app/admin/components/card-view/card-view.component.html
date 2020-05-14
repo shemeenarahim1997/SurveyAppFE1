@@ -1,0 +1,15 @@
+<div class="card-container" *ngFor="let question of questionSet">
+    <p-card [header]='question.Question.question' styleClass="ui-card-shadow">
+        <div *ngFor="let option of question.Options" class="option-container" >
+            <span>{{option.option_label}}</span>
+            <a (click)="updateOption(question.Question,option)">Edit</a>
+            <a (click)="deleteOption(option)" >Delete</a>
+        </div>
+        <p *ngIf="question.Question.question_type === 'TEXT_BOX' ">TEXT BOX</p>
+        <p-footer>
+            <app-button *ngIf="question.Question.question_type != 'TEXT_BOX' " (click)="AddOptionToggler(question.Question)" btnLabel='Add Options'></app-button>
+            <app-button (click)='editQuestion(question.Question)' btnLabel='Edit'></app-button>
+            <app-button (click)='deleteQuestion(question)' btnLabel='Delete'></app-button>
+        </p-footer>
+    </p-card>
+</div>
